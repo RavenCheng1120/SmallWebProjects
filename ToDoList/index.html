@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div>
+		<h2 id="MTDL">My To Do List</h2>
+		<div class="inputArea">
+			<input type="text" id="inputText" maxlength="50" placeholder="Input task here..." onkeydown="pressKey(event)">
+			<button type="button" onclick="clickBtn()">Submit</button>
+		</div>
+	</div>
+
+	<div class="textDisplay">
+		<ul id="ulList">
+			<li>Listen to "How You Remind Me"</li>
+			<li class="taskDone">Wash the dishes</li>
+			<li>Draw something</li>
+			<li>Make dinner</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="controll.js"></script>
+
+</body>
+</html>

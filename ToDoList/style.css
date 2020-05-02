@@ -1,0 +1,86 @@
+*{
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box; /*容器寬度 = width+border+padding*/
+    text-align: center;
+    background-color: #fffff8;
+}
+
+/*消除list的預設邊框和符號*/
+ul {
+  margin: 0;
+  padding: 0;
+
+}
+
+ul li {
+  font-size: 22px;
+  background-color: #e5cdfe;
+  margin-left: 8%;
+  margin-right: 8%;
+  text-align: left;
+  list-style-type: none;
+  padding: 13px 20px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background-color: #f2e6ff;
+}
+
+ul li:hover {
+  background: #b6b6fb;
+}
+
+ul li.taskDone {
+  background: #1966b3;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Style the close button */
+.close {
+  padding: 0px 8px;
+  position: relative;
+  float: right;
+  background-color: transparent;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+#MTDL {
+  font-size: 35px;
+  background-color: #bf8fef;
+  margin: 0px 0px 15px 0px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.inputArea {
+  border: none;
+  margin-bottom: 20px;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+input {
+  padding: 8px;
+  width: 85%;
+  text-align: left;
+  font-size: 18px;
+}
+
+button {
+  padding: 10px;
+  font-size: 18px;
+  width: 14%;
+  color: #fffff8;
+  background-color: #751aff;
+}
+
+button:hover {
+  background-color: #5e0bda;
+}
