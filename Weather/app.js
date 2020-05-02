@@ -1,6 +1,7 @@
 /*
 使用OpenWeather API取得天氣資訊
 https://openweathermap.org/current
+API:e6fb45cb63ce0285250749b70e3e8a8a
 */
 
 window.addEventListener("load", () => {
@@ -15,7 +16,7 @@ window.addEventListener("load", () => {
       long = position.coords.longitude;
       lat = position.coords.latitude;
 
-      const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=e6fb45cb63ce0285250749b70e3e8a8a`;
+      const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=???`;
 
       fetch(api)
         .then(response => {
