@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+/*
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*上方橫條*/
+header {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: #21241b;
+  height: 8vh;
+  padding: 0 8%;
+}
+
+.logo-container {
+  height: 100%;
+  position: relative;
+}
+
+#logo {
+  cursor: pointer;
+  height: 85%;
+  width: auto;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav-links a{
+  color: white;
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  display: inline-block;
+}
+
+.nav-links a:hover{
+  border: 1px solid #d0d0d0;
+}
+
+
+
+/*封面頁*/
+.hero-backgroud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to left, #2b2b28, #4a463f);
+  z-index: -1;
+}
+
+section {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Permanent Marker', sans-serif;
+}
+
+.hero {
+  height: 80%;
+  width: 100%;
+}
+
+.hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.hero #jackThumbnail {
+  transform: scaleX(-1);
+  opacity: 1;
+  position: absolute;
+  display: inline-block;
+  top: 27%;
+  left: calc(8% - 12rem);
+  height: 66%;
+  width: auto;
+  border-bottom: 0.4rem solid #f5f4f0;
+  transition: left 0.8s ease;
+}
+
+.hero #jackThumbnail:hover {
+  transition: 0.7s;
+  left: calc(7% - 12rem);
+}
+
+.headline {
+  position: absolute;
+  top: 35%;
+  left: 38%;
+  font-size: 3.8vw;
+  color: white;
+  cursor: default;
+}
+
+.headline h2 {
+  font-size: 2.5vw;
+  color: #f5f4f0;
+}
+
+
+/*側邊浮空連結*/
+.icons {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.8);
+}
+
+.icons img{
+  margin-bottom: 5px;
+  background-color: #21241b;
+  cursor: pointer;
+}
