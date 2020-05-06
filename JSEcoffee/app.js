@@ -4,6 +4,12 @@ const hero = document.querySelector('.hero');
 const jackThumbnail = document.querySelector('#jackThumbnail');
 const headline = document.querySelector('.headline');
 
+const carouselSlide = document.querySelector('.carousel-slide');
+const carouselImages = document.querySelectorAll('.carousel-slide img');
+const prevBtn = document.querySelector('#prevBtn');
+const nextBtn = document.querySelector('#nextBtn');
+
+//fade in image
 const tl = new TimelineMax();
 
 tl.fromTo(hero, 1.4, {height:'0%'}, {height:'80%', ease: "power3.inOut"})
@@ -13,6 +19,8 @@ tl.fromTo(hero, 1.4, {height:'0%'}, {height:'80%', ease: "power3.inOut"})
   .fromTo(headline, 0.6, {opacity: 0}, {opacity: 1}, "-=0.8")
   .fromTo(jackThumbnail, 1, {opacity: 0, y: 30, scaleY: -1}, {opacity: 1, y:0, scaleY: -1}, "-=1");
 
+
+//scroll appear
 function scrollAppear(){
   const coffeeArticle = document.querySelector('.coffee-article');
   const articlePosition = coffeeArticle.getBoundingClientRect().top;
@@ -25,3 +33,43 @@ function scrollAppear(){
 }
 
 document.addEventListener('scroll',scrollAppear);
+
+
+//image slider
+let counter = 1;
+const carouselSize = carouselImages[0].clientWidth;
+carouselSlide.style.transform = 'translateX(' + (-carouselSize * counter) + 'px)';
+
+nextBtn.addEventListener('click', ()=>{
+  if(counter >= carouselImages.length-1) return;
+  carouselSlide.style.transition = 'transform 0.5s ease-in-out';
+  counter++;
+  carouselSlide.style.transform = 'translateX(' + (-carouselSize * counter) + 'px)';
+  clearInterval(sliderTimer);
+  sliderTimer = setInterval(()=>{nextBtn.click();}, 4000);
+});
+
+prevBtn.addEventListener('click', ()=>{
+  if(counter <= 0) return;
+  carouselSlide.style.transition = 'transform 0.5s ease-in-out';
+  counter--;
+  carouselSlide.style.transform = 'translateX(' + (-carouselSize * counter) + 'px)';
+  clearInterval(sliderTimer);
+  sliderTimer = setInterval(()=>{nextBtn.click();}, 4000);
+});
+
+carouselSlide.addEventListener('transitionend', ()=>{
+  if(carouselImages[counter].id === 'lastClone'){
+    carouselSlide.style.transition = "none";
+    counter = carouselImages.length - 2;
+    carouselSlide.style.transform = 'translateX(' + (-carouselSize * counter) + 'px)';
+  }
+  if(carouselImages[counter].id === 'firstClone'){
+    carouselSlide.style.transition = "none";
+    counter = carouselImages.length - counter;
+    carouselSlide.style.transform = 'translateX(' + (-carouselSize * counter) + 'px)';
+  }
+});
+
+//image slider自動換頁
+let sliderTimer = setInterval(()=>{nextBtn.click();}, 4000);
