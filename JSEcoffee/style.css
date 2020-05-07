@@ -250,7 +250,7 @@ header {
   margin: 0 0 5% 0;
   position: relative;
 
-  background-image: url('./images/coffeeShop2.jpg');
+  background-image: url('./images/coffeeShop2_1.jpg');
   min-height: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -386,32 +386,113 @@ header {
 
 /*第四頁*/
 .page4 {
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   background-position: center;
-  background-size: 100vw 90vh;
-  background-image: url('./images/white.jpg');
+  background-size: 100vw 100vh;
+  background-image: url('./images/wood.jpg');
+  margin-top: 20vh;
+}
+
+.page4-text{
+  position: absolute;
+  top: 4%;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-family: 'Permanent Marker', sans-serif;
+  text-shadow: 3px 3px #457bad;
 }
 
 .page4-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4rem;
+  grid-gap: 3rem;
   align-items: center;
   height: 70%;
-  width: 80%
+  width: 75%;
+  margin-top: 17vh;
 }
 
 .flag-image {
+  position: relative;
   width: 100%;
   height: 100%;
 }
 
- .flag-image img{
+.flag-image img{
    object-fit: cover;
+   position: relative;
    height: 100%;
    width: 100%;
+   border-left: 6px solid #70f75c;
+ }
+
+ #jack02 {
+   border-left: 6px solid #e8e8e8;
+ }
+
+ #jack03 {
+   border-left: 6px solid #ffb12b;
+ }
+
+.flag-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(73, 191, 23, 0.5);
+  opacity: 0;
+}
+
+.flag-green h2, .flag-green p, .flag-orange h2, .flag-orange p{
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  font-family: 'Special Elite', cursive;
+  font-size: 2.4rem;
+  color: white;
+}
+
+.flag-green p, .flag-orange p{
+  top: 15%;
+  font-family: 'Baloo Tamma 2', sans-serif;
+  font-size: 2.1rem;
+}
+
+.flag-white {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.flag-white h2, .flag-white p{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 20%;
+  font-family: 'Special Elite', cursive;
+  font-size: 2.4rem;
+  color: Black;
+}
+
+.flag-white p {
+  font-family: 'Baloo Tamma 2', sans-serif;
+  font-size: 2.1rem;
+  bottom: 12%;
+}
+
+.flag-orange {
+  background-color: rgba(209, 121, 6, 0.5);
+}
+
+ .flag-image:hover .flag-overlay {
+   opacity: 1;
+   cursor: pointer;
  }
