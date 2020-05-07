@@ -152,11 +152,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10vh;
 }
 
 .page2-background {
-  top: 130vh;
+  top: 120vh;
   height: 55vh;
   background: #ede3dd;
   display: flex;
@@ -250,23 +249,31 @@ header {
   align-items: center;
   margin: 0 0 5% 0;
   position: relative;
+
+  background-image: url('./images/coffeeShop2.jpg');
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
 }
 
+/*
 .middle-image img{
   height: 100%;
   width: 100%;
   object-fit: cover;
   opacity: 0.9;
 }
+*/
 
 .type-word {
   font-family: 'Special Elite', cursive;
   text-shadow: 3px 3px #457bad;
   display: flex;
   color: white;
-  font-size: 2.3rem;
+  font-size: 2.7rem;
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 15%;
 }
 
@@ -302,15 +309,14 @@ header {
   text-align: center;
   font-size: 2rem;
   padding: 0 10%;
-  margin-bottom: 5vh;
+  margin-bottom: 6vh;
   color: #e0d1c8;
 }
 
 #page3-context {
   color: white;
-  margin-bottom: 7vh;
-  padding: 0 5%;
-  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 8vh;
+  padding: 0 8%;
 }
 
 .carousel-container {
@@ -352,3 +358,60 @@ header {
   width: auto;
   object-fit: cover;
 }
+
+.view-products-btn {
+  width: 100%;
+  height: 8vh;
+  margin-bottom: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coffee-btn2 {
+  padding: 8px;
+  color: white;
+  font-family: "Black Ops One", sans-serif;
+  font-size: 2rem;
+  text-decoration: none;
+  border: 3px solid white;
+}
+
+.coffee-btn2:hover {
+  color: #f6ff75;
+  border: 3px solid #caff85;
+}
+
+
+
+/*第四頁*/
+.page4 {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: 100vw 90vh;
+  background-image: url('./images/white.jpg');
+}
+
+.page4-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+  align-items: center;
+  height: 70%;
+  width: 80%
+}
+
+.flag-image {
+  width: 100%;
+  height: 100%;
+}
+
+ .flag-image img{
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+ }
