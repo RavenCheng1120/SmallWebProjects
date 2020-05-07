@@ -29,7 +29,6 @@ function scrollAppear(){
   if(articlePosition < screenposition/2){
     coffeeArticle.classList.add('coffee-article-appear');
   }
-
 }
 
 document.addEventListener('scroll',scrollAppear);
@@ -37,7 +36,7 @@ document.addEventListener('scroll',scrollAppear);
 
 //image slider
 let counter = 1;
-const carouselSize = carouselImages[0].clientWidth;
+let carouselSize = carouselImages[0].clientWidth;
 carouselSlide.style.transform = 'translateX(' + (-carouselSize * counter) + 'px)';
 
 nextBtn.addEventListener('click', ()=>{
@@ -73,3 +72,53 @@ carouselSlide.addEventListener('transitionend', ()=>{
 
 //image slider自動換頁
 let sliderTimer = setInterval(()=>{nextBtn.click();}, 4000);
+
+//slider根據視窗大小縮放
+function reportWindowSize() {
+  carouselSize = carouselImages[0].clientWidth;
+  carouselSlide.style.transform = 'translateX(' + (-carouselSize * counter) + 'px)';
+}
+window.onresize = reportWindowSize;
+
+//閃爍
+function blink() {
+  const blinkText = document.querySelector('.typing-line');
+	TweenLite.to(blinkText, 0.3, {
+		autoAlpha: 0,
+		delay: 0.2,
+		onComplete: function() {
+			TweenLite.to(blinkText, 0.3, {
+				autoAlpha: 1,
+				delay: 0.2,
+				onComplete: blink
+			});
+		}
+	});
+}
+blink();
+
+//打字效果
+const typeTexts = ['Coffee', 'Jacksepticeye', 'Laughter'];
+let typeCount = 0;
+let typeIndex = 0;
+let currentText ='';;
+let letter = '';
+
+function sleep(ms) {
+   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+(async function typeOut(){
+  if(typeCount === typeTexts.length)
+    typeCount = 0;
+  currentText = typeTexts[typeCount];
+  letter = currentText.slice(0, ++typeIndex);
+
+  document.querySelector('.typing').textContent = letter;
+  if(letter.length === currentText.length){
+    typeCount++;
+    typeIndex = 0;
+    await sleep(1000);
+  }
+  setTimeout(typeOut, 300);
+}());

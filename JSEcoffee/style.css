@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap');
-/*
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-*/
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 * {
     padding: 0;
@@ -119,13 +117,13 @@ header {
   position: absolute;
   top: 35%;
   left: 38%;
-  font-size: 3.8vw;
+  font-size: 4.4rem;
   color: white;
   cursor: default;
 }
 
 .headline h2 {
-  font-size: 2.5vw;
+  font-size: 2.9rem;
   color: #f5f4f0;
 }
 
@@ -138,6 +136,7 @@ header {
   display: flex;
   flex-direction: column;
   transform: scale(0.8);
+  z-index: 100;
 }
 
 .icons img{
@@ -153,11 +152,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15vh;
+  margin-top: 10vh;
 }
 
 .page2-background {
-  top: 135vh;
+  top: 130vh;
   height: 55vh;
   background: #ede3dd;
   display: flex;
@@ -178,7 +177,7 @@ header {
   height: 80%;
   width: 85%;
   align-items: center;
-  grid-template-columns: 3% 1fr 2% 1.3fr 3%;
+  grid-template-columns: 3% 1fr 1.3fr 3%;
 }
 
 .pageImage{
@@ -205,14 +204,14 @@ header {
 
 .coffee-article {
   text-align: center;
-  grid-column: 4/5;
+  grid-column: 3/4;
   font-size: 2rem;
   color: #29241b;
   margin-top: -10%;
   z-index: 3;
 
   transform: translateY(50px);
-  transition: transform 1s ease-in-out;
+  transition: transform 1.2s ease-in-out;
   opacity: 0;
 }
 
@@ -224,7 +223,7 @@ header {
 .coffee-article h2{
   font-family: 'Permanent Marker', sans-serif;
   font-size: 6.2vh;
-  color: #395c0f;
+  color: #bf3600;
   margin-bottom: 10px;
 }
 
@@ -243,6 +242,45 @@ header {
 }
 
 
+/*中間插頁*/
+.middle-image {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 5% 0;
+  position: relative;
+}
+
+.middle-image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.type-word {
+  font-family: 'Special Elite', cursive;
+  text-shadow: 3px 3px #457bad;
+  display: flex;
+  color: white;
+  font-size: 2.3rem;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+
+.typing {
+  position: relative;
+  margin-left: 15px;
+}
+
+.typing-line {
+  border-right: 2px solid white;
+  width: 1px;
+  margin-left: 5px;
+}
+
 
 /*第三頁*/
 .page3 {
@@ -256,7 +294,8 @@ header {
 
 .page3 h1 {
   text-align: center;
-  font-size: 4vw;
+  font-size: 6rem;
+  font-family: 'Permanent Marker', sans-serif;
 }
 
 .page3 p {
@@ -264,10 +303,13 @@ header {
   font-size: 2rem;
   padding: 0 10%;
   margin-bottom: 5vh;
+  color: #e0d1c8;
 }
 
 #page3-context {
-  padding: 0 20%;
+  color: white;
+  margin-bottom: 7vh;
+  padding: 0 5%;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -301,10 +343,12 @@ header {
   display: flex;
   width: 100%;
   height: 45rem;
+  margin-bottom: 5rem;
 }
 
 .carousel-slide img{
   max-width: 100%;
   display: block;
   width: auto;
+  object-fit: cover;
 }
