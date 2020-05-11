@@ -14,6 +14,4 @@
 ![image](https://github.com/RavenCheng1120/SmallWebProjects/blob/master/ParallaxWebsite/images/imageP3-3.png)
 
 5. Jacksepticeye coffee company
-<video width="320" height="240" controls>
-  <source src="./JSEcoffee/MorningBell.mp4" type="video/mp4">
-</video>
+[![Demo Video](https://img.youtube.com/vi/TN_7pr69zeM/0.jpg)](https://www.youtube.com/watch?v=TN_7pr69zeM)
