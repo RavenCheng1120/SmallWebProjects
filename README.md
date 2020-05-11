@@ -13,5 +13,5 @@
 ![image](https://github.com/RavenCheng1120/SmallWebProjects/blob/master/ParallaxWebsite/images/imageP3-2.png)  
 ![image](https://github.com/RavenCheng1120/SmallWebProjects/blob/master/ParallaxWebsite/images/imageP3-3.png)
 
-5. Jacksepticeye coffee company
+5. Jacksepticeye coffee company  
 [![Demo Video](https://img.youtube.com/vi/TN_7pr69zeM/0.jpg)](https://www.youtube.com/watch?v=TN_7pr69zeM)
