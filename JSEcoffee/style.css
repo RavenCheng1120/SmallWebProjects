@@ -405,7 +405,7 @@ header {
   color: white;
   font-size: 3rem;
   font-family: 'Permanent Marker', sans-serif;
-  text-shadow: 3px 3px #457bad;
+  text-shadow: 3px 3px #786347;
 }
 
 .page4-grid {
@@ -496,3 +496,60 @@ header {
    opacity: 1;
    cursor: pointer;
  }
+
+
+ /*頁面底端*/
+ footer{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    background-color: #18181a;
+    position: relative;
+    margin-top: 15vh;
+}
+
+.inner-footer {
+  display: block;
+  margin: 0 auto;
+  width: 80vw;
+  height: 100%;
+}
+
+.inner-footer .logo_container {
+  float: left;
+  display: block;
+  width: 30%;
+  height: 100%;
+}
+
+.inner-footer .logo_container img{
+  height: auto;
+  width: 150px;
+}
+
+.inner-footer .footer_third {
+  width: 20%;
+  margin-right: 10px;
+  float: left;
+  height: 100%;
+}
+
+.footer_third h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+  color: white;
+  display: block;
+  width:100%;
+  margin-bottom: 20px;
+}
+
+.footer_third p{
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: white;
+  display: block;
+  width:100%;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
