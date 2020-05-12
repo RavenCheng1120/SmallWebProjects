@@ -18,3 +18,7 @@
 
 6. Clock  
 ![image](https://github.com/RavenCheng1120/SmallWebProjects/blob/master/MemeClock/assets/demo.png)
+
+7. Tic Tac Toe    
+電腦玩家使用Minimax Algorithm運作。    
+![image](https://github.com/RavenCheng1120/SmallWebProjects/blob/master/TicTacToe/demo.png)
