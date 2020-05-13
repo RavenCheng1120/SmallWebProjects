@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+  background-color: rgba(237, 74, 74, 1);
+  border-radius: 6px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 100%;
+}
+
+header {
+  padding: 20px 40px 0px 40px;
+  color: #f7f7f7;
+  font-size: 26px;
+}
+
+.form {
+  padding: 20px 40px;
+}
+
+.form-control {
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border-radius: 3px;
+  border: 2px solid #f0f0f0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #2e2e26;
+}
+
+.form-control i {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+  visibility: visible;
+  color: #2ecc71;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: #2e2e26;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #2e2e26;
+}
+
+.form button {
+  display: block;
+  width: 100%;
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 18px;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.success-page {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  background-color: #adc9b4;
+  width: 70vw;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.success-message h2{
+  font-size: 50px;
+}
